@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-04-05 Sat 17:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yashica J-4 Repair</title>
+<meta name="author" content="me" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Yashica J-4 Repair</h1>
+<p>
+The other day, I found a Yashica J-4 "as is" for pennies on the dollar in the
+thrift store, coupled with a 50mm f/2.0 kit lens. I wouldn't have been so
+interested, but it came with a wicked strap, so bada bing bada boom, I'm the
+proud owner of a Yashica J-4.
+</p>
+
+<p>
+It was pretty busted, the slower speeds would jam ~80% of the time they were
+fired, so it wasn't really operable. The self timer also wouldn't fire, so that
+needed some work too. As always, the lightmeter was inoperable, but that's par
+for the course. Maybe one day it could be recovered, but that wasn't in the
+cards.
+</p>
+
+<p>
+I recorded the teardown process in <a href="https://www.youtube.com/watch?v=-VF2z-BqDyA">this video</a>, which can be seen as a companion
+piece to this blog post. While that is more of me fucking around and finding
+out, this post is more of a methodological description of what I could find
+wrong with the camera and how I fixed it, as well as a testimonial about the
+differences between the J-4 and J-7 that I could spot (barely anything&#x2026;?)
+</p>
+
+<p>
+I followed <a href="https://jabcam.wordpress.com/2013/03/02/topic-inside-a-yashica-j-7/">this blog post titled "Inside a Yashica J-7"</a> by jabcam for the
+teardown, and I highly recommend reading through it if you're looking to do
+something like this for yourself.
+</p>
+
+<p>
+The pictures in the blog post are either taken on my pixel 7 pro, or olympus
+om-d em-5 with a 14-42mm f/3.5 lens.
+</p>
+
+
+<div id="org1bf735e" class="figure">
+<p><img src="./yashica-photos/yashica.png" alt="yashica.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>The Yashica J-4 before disassembly</p>
+</div>
+
+<p>
+The tools I used were:
+</p>
+<ul class="org-ul">
+<li>Trusty pliers (leatherman Signal)</li>
+<li><a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=SPW801">Spapper wrench (thorlabs spw801 - highly recommended)</a></li>
+<li><a href="https://japanhobbytool.com/collections/camera-repair-tool/products/liquid-dispenser">IPA dispenser - also highly recommended</a></li>
+<li>isopropyl (obviously)</li>
+<li>Air blower to get rid of dust</li>
+<li>iFixit screwdriver + bit kit</li>
+<li><a href="https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/">Pinecil - the best soldering iron on the market</a></li>
+<li>Third hand for soldering</li>
+<li>Tweezers (don't even try this without some precision tweezers, they're the
+best investment you could make - useful for holding screws in place, holding
+wires, getting cleaning material into hard to reach places, depositing oil in
+very tight spots (on specific gears, say, or between the curtain and the
+camera body))</li>
+<li>iFixit magnetic parts tray (though most of the screws are non-magnetized,
+so&#x2026;)</li>
+<li><a href="https://japanhobbytool.com/collections/camera-repair-material/products/lightsealsfoam125-250?variant=42639452471518">New light seals</a> + knife to cut to size</li>
+<li>Q-Tips to brush everything down</li>
+<li>Nyoil, to lubricate the high-speed mecahnisms (shutter mechanism, low-speed
+governor, and self-timer)</li>
+<li>J-B Weld to glue back the mirror box together</li>
+<li>Contact cement to put the leatherette back on</li>
+</ul>
+
+<p>
+One clear difference between the J-4 and J-7 that caused me a headache was that
+the lightmeter hood is not screwed on on the J-4 - it's just press-fit into the
+body. It snaps into place, and you've got to unsnap it with a pair of pliers,
+rather than turning it CCW, as jabcam did. There are also only two screws on the
+top cover, rather than three.
+</p>
+
+
+<div id="org8410144" class="figure">
+<p><img src="./yashica-photos/filthy.jpg" alt="filthy.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>The internals were FILTHY</p>
+</div>
+
+<p>
+Once I got the mirror box out, some pieces fell out of it since the glue had
+long since dried up, specifically a metal backplate that sits against the
+shutter, and a metal plate that sits between the mirror and the low-speed
+governor. We will revisit them later when I need to glue them back.
+</p>
+
+<p>
+Once I got the self-timer off and cleaned it by immersing it in IPA and running
+the timer a few times, it would still not run. So, I applied some nyoil
+specifically to the gear on the inside of it that spins the fastest. It can be
+found somewhere in here&#x2026; 
+</p>
+
+
+<div id="org34c2c29" class="figure">
+<p><img src="./yashica-photos/oil-location.png" alt="oil-location.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>I think you'll be able to figure out which gear it is. After doing this, the self-timer runs like new.</p>
+</div>
+
+<p>
+Similarly, the low-speed governor was just too gunked up. I applied some nyoil
+to several locations (somewhat liberally, firing it between applications to see
+if I had done enough and to determine which component needed the lubrication).
+</p>
+
+
+
+<div id="org9b483c9" class="figure">
+<p><img src="./yashica-photos/governor-oil-location.png" alt="governor-oil-location.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>This one needed a lot more love</p>
+</div>
+
+<p>
+While I was at it, I cleaned up and replaced the accessible light seals.
+</p>
+
+
+<div id="org6c11c92" class="figure">
+<p><img src="./yashica-photos/light-seals.png" alt="light-seals.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>The mirror box flash contacts weren't even soldered in when I took the camera apart!</p>
+</div>
+
+<p>
+After a thorough cleaning, I applied nyoil to the shutter mechanism, quite
+sparingly.
+</p>
+
+
+<div id="orgbfac0f2" class="figure">
+<p><img src="./yashica-photos/shutter-oil-spot.png" alt="shutter-oil-spot.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>I did the same on the other side. Photo taken before said cleaning :)</p>
+</div>
+
+
+<p>
+Now, it was time to put the mirror box back in. The following video shows my
+conundrum there:
+</p>
+
+<iframe width="50%" height="500em"
+src="https://www.youtube.com/embed/jOw2elezw0M">
+</iframe>
+
+<p>
+Finally, I glued it using J-B weld.
+</p>
+
+
+<div id="orge55bc72" class="figure">
+<p><img src="./yashica-photos/epoxy.png" alt="epoxy.png" />
+</p>
+<p><span class="figure-number">Figure 7: </span>Thank god for shelf-stable glue!</p>
+</div>
+
+<p>
+Once those parts were in place, I was able to reassemble the camera without a
+hitch!
+</p>
+
+<p>
+The last part was gluing the leatherette back on, and this worked great, and
+lined up perfectly.
+</p>
+
+
+<div id="orgae27bc4" class="figure">
+<p><img src="./yashica-photos/contact-cement.jpg" alt="contact-cement.jpg" />
+</p>
+<p><span class="figure-number">Figure 8: </span>Lining up these pieces is always stressful&#x2026;</p>
+</div>
+
+<p>
+And finally, a working camera!
+</p>
+
+<p>
+&#x2026;almost&#x2026;
+</p>
+
+<iframe width="50%" height="500em"
+src="https://www.youtube.com/embed/61akzGYMaMk">
+</iframe>
+
+<p>
+Looks like the list of things to do is neverending. But this camera is ready for
+light use!
+</p>
+
+
+<div id="org19065a2" class="figure">
+<p><img src="./yashica-photos/beaut.jpg" alt="beaut.jpg" />
+</p>
+<p><span class="figure-number">Figure 9: </span>Ain't she a beaut!</p>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: me</p>
+<p class="date">Created: 2025-04-05 Sat 17:35</p>
+</div>
+</body>
+</html>
